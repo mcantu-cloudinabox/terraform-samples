@@ -1,11 +1,13 @@
-name: tfsec
+name: tfsec - terraform scan
 
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]  
-    
+  # schedule:
+  #   - cron: '25 5 * * 3'
+
 jobs:
   tfsec:
     name: Run tfsec sarif report
